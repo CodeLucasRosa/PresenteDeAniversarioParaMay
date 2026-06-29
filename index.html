@@ -1,103 +1,445 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecBlog - O seu Blog de tecnologia</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Aniversário 🤍</title>
 
-    <link rel="stylesheet" href="CSS/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --verde:#750000;
+  --rosa-claro:#6e0012;
+  --rosa:#ca2626;
+  --rosa-forte:#f53c67;
+  --marrom:#281916;
+  --texto:#fff5f7;
+
+  --cor-fundo:linear-gradient(
+    180deg,
+    var(--verde),
+    var(--rosa-claro),
+    var(--rosa),
+    var(--rosa-forte)
+  );
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  background:var(--cor-fundo);
+  color:var(--texto);
+  overflow-x:hidden;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+
+.card{
+  width:90%;
+  max-width:900px;
+  background:rgba(255,255,255,.10);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:35px;
+  padding:40px;
+  text-align:center;
+
+  box-shadow:
+    0 0 30px rgba(245,60,103,.15),
+    0 0 80px rgba(245,60,103,.10),
+    0 20px 50px rgba(0,0,0,.30);
+}
+
+h1,h2{
+  color:white;
+  text-shadow:
+    0 0 10px rgba(255,255,255,.35),
+    0 0 30px rgba(245,60,103,.45);
+}
+
+h1{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+h2{
+  font-size:2rem;
+  margin-bottom:20px;
+}
+
+p{
+  color:var(--texto);
+  font-size:1.15rem;
+  line-height:1.8;
+}
+
+button{
+  margin-top:30px;
+  padding:15px 35px;
+  border:none;
+  border-radius:50px;
+  background:var(--rosa-forte);
+  color:white;
+  cursor:pointer;
+  font-size:1.1rem;
+  font-weight:600;
+  transition:.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+  background:var(--rosa);
+}
+
+#mensagem{
+  display:none;
+  margin-top:25px;
+  font-size:1.3rem;
+}
+
+.galeria{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+  margin-top:30px;
+}
+
+.galeria img{
+  width:220px;
+  height:300px;
+  object-fit:cover;
+  border-radius:20px;
+  border:4px solid rgba(255,255,255,.2);
+  transition:.4s;
+}
+
+.galeria img:hover{
+  transform:scale(1.05);
+}
+
+.lista{
+  max-width:650px;
+  margin:auto;
+  text-align:left;
+}
+
+.lista li{
+  margin:15px 0;
+  color:var(--texto);
+}
+
+.contador{
+  margin-top:25px;
+  font-size:2rem;
+  color:white;
+  font-weight:bold;
+  line-height:1.5;
+}
+
+.spotify-player{
+  max-width:350px;
+  margin:auto;
+  background:#111;
+  border-radius:25px;
+  padding:25px;
+  box-shadow:
+    0 0 30px rgba(245,60,103,.35);
+}
+
+.album{
+  width:100%;
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+
+.music-name{
+  color:white;
+  font-size:1.3rem;
+  font-weight:600;
+}
+
+.artist{
+  color:#cfcfcf;
+  margin-top:8px;
+  margin-bottom:25px;
+}
+
+.spotify-player audio{
+  width:100%;
+  filter:
+    hue-rotate(320deg)
+    saturate(2);
+}
+
+.falling-image{
+  position:fixed;
+  top:-120px;
+  width:60px;
+  height:60px;
+  object-fit:cover;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:9999;
+  opacity:.7;
+  animation:fall linear forwards;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(120vh) rotate(360deg);
+  }
+}
+
+@media(max-width:430px){
+
+  section{
+    min-height:auto;
+    padding:30px 15px;
+  }
+
+  .card{
+    width:100%;
+    padding:25px 20px;
+  }
+
+  h1{
+    font-size:2rem;
+  }
+
+  h2{
+    font-size:1.6rem;
+  }
+
+  p,
+  li{
+    font-size:1rem;
+  }
+
+  .contador{
+    font-size:1.3rem;
+  }
+
+  .galeria img{
+    width:100%;
+    max-width:280px;
+    height:auto;
+  }
+
+  button{
+    width:100%;
+  }
+}
+</style>
 </head>
 <body>
 
-    <div id="box-cabecalho">
+<section>
+<div class="card">
+<h1>🤍 Feliz Aniversário 🤍</h1>
 
-        <div id="box-logo-cabecalho">
-            <h1 id="logo-cabecalho">Tec<span class="logo-cabecalho-segundacor">Blog</span></h1>
-        </div>
-        <div id="box-menu-cabecalho">
-            <a href="index.html">Home</a>
-            <a href="index.html">Jogos</a>
-            <a href="index.html">Celulares</a>
-            <a href="index.html">Informática</a>
-            <a href="index.html">Eletrônicos</a>
-        </div>
+<p>
+Oie amor, tudo bom contigo? Fiz esse site para você. Espero que você goste do site e dos presentes que você vai encontrar dentro dessa caixa vermelha bem bonita.
+</p>
 
-    </div>
+<button onclick="mostrarMensagem()">
+🤍 Clique Aqui 🤍
+</button>
 
-    <div id="area-principal">
-        
-        <div id="area-postagem">
-            
-            <div class="postagem">
-                <h2>Café ajuda na Produtividade? <span class="veja-agora">Veja Agora</span></h2>
-                <span class="data-postagem">Postado 22 Fevereiro 2025</span>
-                <img width="620" src="Imagens/Café e um Computador.jpg" alt="Um Café e um Computador" title="Um Café e um Computador">
-                <p>
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque exercitationem culpa, accusantium debitis architecto tempora dolorum totam sint velit ipsum obcaecati odit sunt enim adipisci, doloribus aliquid? Quasi, ex enim. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima odit ex cupiditate ipsam neque molestiae pariatur vel. Optio in nisi aperiam, vero saepe dolorum ipsa harum magni blanditiis perspiciatis aspernatur.
-                </p>
-                    <br>
-                <a href=""><span class="leia-mais">Leia Mais</span></a>
-            </div>
+<p id="mensagem">
+Você é perfeita e não tem nada que faça eu mudar de ideia sobre você. EU TE AMO MEU AMOR, PERFEITAAA!!!! GOSTOSONA, LINDAAAAAAAAAAA. Eu te vivo amor, eu vejo você, eu amo você, eu tava com saudade de ti. 🤍
+</p>
+</div>
+</section>
 
-            <div class="postagem">
-                <h2>Muita tecnologia atrapalha sua vida?<span class="veja-agora">Leia Agora</span></h2>
-                <span class="data-postagem">Postado 22 Fevereiro 2025</span>
-                <img width="620" src="Imagens/Pessoa mexendo no celular com um computador na frente.jpg" alt="Pessoa mexendo no celular com um computador na frente" title="Pessoa mexendo no celular com um computador na frente">
-                <p>
-                    <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque exercitationem culpa, accusantium debitis architecto tempora dolorum totam sint velit ipsum obcaecati odit sunt enim adipisci, doloribus aliquid? Quasi, ex enim. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima odit ex cupiditate ipsam neque molestiae pariatur vel. Optio in nisi aperiam, vero saepe dolorum ipsa harum magni blanditiis perspiciatis aspernatur.
-                    <br><br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eos maxime esse aliquid sint. Alias, accusantium voluptatibus vitae numquam ex, quibusdam nisi quis dolorum quidem pariatur repellendus veniam nesciunt temporibus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe distinctio optio eius voluptas, nemo praesentium, accusamus, molestias veritatis ducimus assumenda provident. Explicabo numquam quia repellendus voluptates obcaecati quisquam illo harum.
-                </p>
-                    <br>
-                <a href=""><span class="leia-mais">Leia Mais</span></a>
-            </div>
+<section>
+<div class="card">
+<h2>💌 Uma Carta Para Você 💌</h2>
 
-        </div>
+<p>
+Feliz aniversário amor, hoje é o dia em que Deus permitiu você ser a mulher que você é hoje. 18 anos, ambos temos agora. Isso é tão incrível. Sei que vamos conquistar um monte de coisas juntos e estar ao seu lado é algo tão único e confortável.
+</p>
 
-        <div id="area-lateral">
-            
-            <div class="conteudo-area-lateral">
-                <h3>Postagem Recentes</h3>
-                <div class="postagem-lateral">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit ipsum dolor, sit amet consectetur adipisicing elit</p>
-                    <br>
-                    <a href=""><span class="leia-mais">Leia Mais</span></a>
-                </div>
-                
-                <hr>
+<br>
 
-                <div class="postagem-lateral">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit ipsum dolor, sit amet consectetur adipisicing elitb</p>
-                    <br>
-                    <a href=""><span class="leia-mais">Leia Mais</span></a>
-                </div>
-               
-            </div>
+<p>
+Espero continuar construindo muitas memórias ao seu lado. Eu te amo muito e desejo que seu dia seja tão lindo quanto você.
+</p>
+</div>
+</section>
 
-            <div class="conteudo-area-lateral-categoria">
+<section>
+<div class="card">
+<h2>📸 Nossos Momentos 📸</h2>
 
-                <div class="conteudo-area-lateral">
-                    <h3>Categorias</h3>
-                        <a href="">Jogos</a>
-                        <a href="">Eletrônicos</a>
-                        <a href="">Celulares</a>
-                        <a href="">Informática/a>
-                        <a href="">Dúvidas</a>
-                    </div>
-                   
-                </div>
+<div class="galeria">
+<img src="foto1.jpeg">
+<img src="foto2.jpeg">
+<img src="foto3.jpeg">
+<img src="foto4.jpeg">
+</div>
 
-            </div>
+<p style="margin-top:20px;">
+Cada foto representa momentos mais do que especiais que vivemos juntos.
+</p>
+</div>
+</section>
 
-        </div>
+<section>
+<div class="card">
+<h2>🤍 10 Coisas Que Eu Amo Em Você 🤍</h2>
 
-        <div id="rodape">
-            Todos os Direitos Reservados
-        </div>
+<ol class="lista">
+<li>Seu sorriso.</li>
+<li>Seu cabelo.</li>
+<li>Seu jeito diferente dos demais.</li>
+<li>Seu rosto inteiro.</li>
+<li>Seu corpo inteiro.</li>
+<li>Sua inteligência.</li>
+<li>Suas habilidades na cozinha.</li>
+<li>Sua paixão por filmes de romance.</li>
+<li>Seu jeito de reparar nas coisas pequenas.</li>
+<li>Eu amo que você me ame.</li>
+</ol>
+</div>
+</section>
 
-    </div>        
+<section>
+<div class="card">
+
+<h2>🎵 Nossa Música 🎵</h2>
+
+<div class="spotify-player">
+
+<img src="foto5.jpg" class="album">
+
+<div class="music-name">
+De Janeiro a Janeiro
+</div>
+
+<div class="artist">
+Roberta Campos, Nando Reis
+</div>
+
+<audio controls>
+<source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="card">
+<h2>⏳ Tempo Juntos ⏳</h2>
+
+<p>
+Desde 10 de janeiro de 2026 ❤️
+</p>
+
+<div id="contador" class="contador"></div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<h1>❤️ Eu Te Amo Muito ❤️</h1>
+
+<p>
+Obrigado por existir e por fazer minha vida mais feliz. Estou ansioso para viver outros aniversários ao seu lado.
+</p>
+</div>
+</section>
+
+<script>
+function mostrarMensagem(){
+  document.getElementById("mensagem").style.display = "block";
+}
+
+const dataInicio = new Date(2026,0,10,0,0,0);
+
+function atualizarContador(){
+  const agora = new Date();
+  const diferenca = agora - dataInicio;
+
+  const dias = Math.floor(diferenca / (1000*60*60*24));
+  const horas = Math.floor((diferenca / (1000*60*60)) % 24);
+  const minutos = Math.floor((diferenca / (1000*60)) % 60);
+  const segundos = Math.floor((diferenca / 1000) % 60);
+
+  document.getElementById("contador").innerHTML =
+  `${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos ❤️`;
+}
+
+atualizarContador();
+setInterval(atualizarContador,1000);
+
+const imagens = [
+  "chuva1.png",
+  "chuva2.png",
+  "chuva3.png",
+  "chuva4.png",
+  "chuva5.png",
+  "chuva6.png",
+  "chuva7.png",
+  "chuva8.png",
+  "chuva9.png",
+  "chuva10.png"
+];
+
+function criarImagemCaindo(){
+
+  const img = document.createElement("img");
+
+  img.classList.add("falling-image");
+
+  img.src =
+    imagens[
+      Math.floor(Math.random() * imagens.length)
+    ];
+
+  img.style.left =
+    Math.random() * 90 + "vw";
+
+  img.style.width =
+    (45 + Math.random() * 20) + "px";
+
+  img.style.height =
+    img.style.width;
+
+  img.style.animationDuration =
+    (14 + Math.random() * 8) + "s";
+
+  document.body.appendChild(img);
+
+  setTimeout(() => {
+    img.remove();
+  },25000);
+}
+
+setInterval(criarImagemCaindo,2500);
+</script>
 
 </body>
 </html>
+
